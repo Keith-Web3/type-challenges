@@ -1,4 +1,6 @@
-// type SplitToUnion<T extends any[]> =
+// The transpose of a matrix is an operator which flips a matrix over its diagonal; that is, it switches the row and column indices of the matrix A by producing another matrix, often denoted by AT.
+// Implement the Transpose<T> generic which takes an array of arrays T and returns the transpose of T.
+
 type GetN<T extends number[][], N extends number = 0> = T extends [
   infer S extends any[],
   ...infer R extends any[]
