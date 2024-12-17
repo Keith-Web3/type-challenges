@@ -4,8 +4,8 @@ type GetOptional<T> = {
     : never]: T[K]
 }
 
-type optional1 = GetOptional<{ foo: number; bar?: string }> // expected to be { foo: number }
-type optional2 = GetOptional<{ foo: undefined; bar?: undefined }> // expected to be { foo: undefined }
+type optional1 = GetOptional<{ foo: number; bar?: string }> // expected to be { bar?: string }
+type optional2 = GetOptional<{ foo: undefined; bar?: undefined }> // expected to be { bar?: undefined }
 
 type check = { foo: number; bar?: string } extends { foo: number }
   ? true
