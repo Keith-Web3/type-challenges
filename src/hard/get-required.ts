@@ -1,6 +1,6 @@
 type GetRequired<T> = {
   [K in keyof T as T extends {
-    [O in keyof T as O extends K ? O : never]-?: T[K]
+    [O in keyof T as O extends K ? O : never]-?: T[K] // could also use Record<K, T[K]>
   }
     ? K
     : never]: T[K]

@@ -1,5 +1,5 @@
 type GetOptional<T> = {
-  [K in keyof T as { [O in keyof T as O extends K ? never : O]: T[O] } extends T
+  [K in keyof T as { [O in keyof T as O extends K ? never : O]: T[O] } extends T // could also just use Omit<T, K>
     ? K
     : never]: T[K]
 }
