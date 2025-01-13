@@ -36,7 +36,7 @@ type CapitalizeWords<T extends string> = T extends `${infer F} ${infer R}`
   ? `${Letters[A]}${B}`
   : T
 
-type capitalized = CapitalizeWords<'hello world, my friends'> // expected to be 'Hello World, My Friends'
+type capitalized = CapitalizeWords<'he!llo world, my friends'> // expected to be 'He!Llo World, My Friends'
 
 type wjf = keyof Letters
 type wjf2 = '$' extends symbol ? 'yes' : 'no'
